@@ -1,0 +1,40 @@
+<!-- Jeu de la vie de John Conway
+1) lire les explications de Martin Gardner.
+2) Créer une page avec l'apsect suivant, et y implémenter le jeu de la vie:
+-->
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> TP23: John Conway's game of life </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@500&display=swap" rel="stylesheet"> 
+  </head>
+  <body>
+    <h1> Game of life </h1>
+    <p1 id="Nb_ticks"> Step: 0 </p1>
+    <div id="zone_dessin">
+      <canvas id="zone_cadre" width="500" height="500"> </canvas>
+      <canvas id="zone_animation" width="500" height="500"> </canvas>
+    </div>
+    <div>
+      <select id="menu1">
+        <option selected value="1"> 10x10 </option>
+        <option value="2"> 20x20 </option>
+        <option value="3"> 30x30 </option>
+        <option value="4"> 40x40 </option>
+        <option value="5"> 50x50 </option>
+      </select>
+      <select id="menu2">
+        <option value="1"> Red and yellow</option>
+        <option selected value="2"> White and black </option>
+      </select>
+      <input type="button" id="b1" value="Randomize">
+      <input type="button" id="b1effacer" value="Clear">
+      <input type="button" id="b2" value="Play">
+      <input type="button" id="b3" value="Pause">
+      <input type="button" id="b4" value="Step">
+    </div>
+    <script src="index.js" async defer></script>
+  </body>
+</html>

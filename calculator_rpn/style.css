@@ -1,0 +1,78 @@
+h1 {font-size: 36px; font-weight: bold; font-family: 'Lemonada', cursive; text-align: center;}
+
+body {
+    align-items:center;
+    justify-content:center;
+    color: black; 
+    font-size: 24px;
+    font-weight: bold; 
+    font-family: Arial
+  }
+  
+input[type="button"]{
+    background-color: lightgrey;
+    width: 40px;
+    height: 40px;
+    font-size: 14px; 
+    font-weight: bold;
+}
+input[type="button"]:focus{
+    background-color: grey
+  }
+.box {
+  box-sizing: border-box;
+  width: 200px;
+  height: 50px;
+  background-color: white;
+  border: 5px solid black;
+  padding: 5px;
+  font-size: 18px; 
+  justify-content: center;
+  text-align: right;
+  font-family: 'Playfair Display', serif;
+}
+
+.calculator{
+  border: solid rgb(150,150,150) 30px;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.clavier {
+  box-sizing: border-box;
+  width: 200px;
+  height: 200px;
+  display: grid; 
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+}
+
+.myDiv {
+  background-color: rgb(30,30,30);
+}
+.myDiv2 {
+  grid-column: span 2;
+  background-color: rgb(0,0,100);
+  color: rgb(30,30,250);
+}
+
+input[type="button"] {
+ height: 100%;
+ width: 100%;
+ background-color: transparent;
+ border: 2px solid rgb(200,200,200);
+ color: rgb(220,220,220);
+ font-size: 24px;
+ font-weight: bold;
+}
+
+.myDivStack {
+  border: 2px solid #333;
+  background-color: lightblue;
+  text-align: center;
+  padding: 5px;
+  display: inline-block;
+}

@@ -1,0 +1,85 @@
+h1 {font-size: 36px; font-weight: bold; font-family: 'Lemonada', cursive; text-align: center;}
+
+body {
+    align-items:center;
+    justify-content:center;
+    color: black; 
+    font-size: 24px;
+    font-weight: bold; 
+    font-family: Arial;
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+  }
+
+
+.note{
+  border: solid rgb(150,150,150) 5px;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(234,238,227,0.591456651019783) 100%);
+}
+
+
+.box {
+  box-sizing: border-box;
+  width: 90%;
+  height: 50px;
+  margin-bottom: 50px;
+  margin-left: 5%;
+  margin-right: 5%;
+  display: flex; 
+  flex-direction: row;
+}
+
+li {
+  list-style: none;
+  display: flex; 
+  flex-direction: row;
+}
+
+.myDiv{
+  font-size: 18px; 
+  font-weight: bold;
+  width: 80%;
+  padding: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  background: rgb(216, 230, 250);
+}
+
+
+textarea{
+  box-sizing: border-box;
+  border: 3px solid yellow;
+  font-size: 18px; 
+  font-weight: bold;
+  width: 80%;
+  margin-right: 5px;
+}
+
+textarea:focus{
+  border: 3px solid red;
+}
+
+.clearBtn{
+  border-color: transparent;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+
+#okBtn{
+  background-color: lightgrey;
+  font-size: 18px; 
+  font-weight: bold;
+  width: 15%;
+  height: 100%;
+  margin-left: 5%;
+}
+input[type="button"]:hover{
+  background-color: grey
+}

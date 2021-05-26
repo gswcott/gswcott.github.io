@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@500&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet"> 
+  </head>
+  <body>
+    <h1> Agenda </h1>
+    <div class="calendar">
+      <div class="oneLineDiv">
+        <input type="button" id="preBtnY" value=&laquo /> 
+        <input type="button" id="preBtn" value=&#8249; /> 
+        <div id="textDiv" class="textDiv"> </div>
+        <input type="button" id="nextBtn" value=&#8250 /> 
+        <input type="button" id="nextBtnY" value=&raquo /> 
+      </div>
+      <div class="oneLineDiv"> 
+        <div class="dayDiv">L</div>
+        <div class="dayDiv">M</div>
+        <div class="dayDiv">M</div>
+        <div class="dayDiv">J</div>
+        <div class="dayDiv">V</div>
+        <div class="dayDiv">S</div>
+        <div class="dayDiv">D</div>
+      </div>
+      <div id="dateGrid" class="dateGrid" ></div>
+    </div>
+    <div id="note" class="note">
+    </div>
+    <script src="agenda.js"></script>
+  </body>
+</html>

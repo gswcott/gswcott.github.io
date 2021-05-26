@@ -1,0 +1,25 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    font-size:30;
+ }
+ canvas{
+    border: 2px black solid;
+    margin-top:20px;
+    margin-bottom: 20px;
+    font-size:30;
+ }
+ 
+ div{
+    width: 100px;
+    height: 100px;
+    color: white;
+    margin-right: 50px;
+    font-weight: bold;
+    font-size: 20;
+ }
+ #panelDiv{
+    margin-bottom: 300px;
+ }

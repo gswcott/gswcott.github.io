@@ -1,0 +1,64 @@
+h1 {font-size: 36px; font-weight: bold; font-family: 'Lemonada', cursive; text-align: center;}
+
+body {
+    align-items:center;
+    justify-content:center;
+    color: black; 
+    font-size: 24px;
+    font-weight: bold; 
+    font-family: Arial;    
+  }
+
+
+.game{
+  display: flex;
+  flex-direction: column;
+  border: solid rgb(150,150,150) 5px;
+  width: 280px;
+  height: 280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.keyboardNumber {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  display: grid; 
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+}
+
+.myDiv {
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: lightgray darkgray darkgray lightgray;
+}
+.myDiv2{
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: yellow orange orange yellow;
+}
+
+#shuffleBtn {
+  margin-top: 20px;
+  text-align: center;
+  align-content: center;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.hole{
+  background-color: rgb(150,150,150);
+  border-width: 10px;
+  border-style: solid;
+  border-color: darkgray lightgray lightgray darkgray;
+}

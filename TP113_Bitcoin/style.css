@@ -1,0 +1,41 @@
+span{
+    color: orangered;
+    font-weight: bold;
+}
+canvas {
+    border:2px solid black;
+}
+
+#frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+#btns {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+input{
+    border: 2px solid;
+    padding: 4px 4px;
+    border-color: lightgray gray gray lightgray;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left:5px;
+    margin-right:5px;
+    font-weight: bold;
+    font-size: 14px;
+    color: purple;
+}
+
+input:hover{
+    background: gray;
+}
+input:focus{
+    background: lightcoral;
+}

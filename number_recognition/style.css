@@ -1,0 +1,58 @@
+html {
+  box-sizing: border-box;
+  background: rgb(250, 135, 135);
+}
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input[type="radio"] {
+  box-sizing: border-box;
+	display: none;
+}
+
+input[type="radio"]:checked + label {
+  box-sizing: border-box;
+  border: 3px solid black;
+}
+canvas{
+  margin-bottom: 10px;
+}
+label {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  margin-right: 10px;
+  cursor: pointer;
+  font-size: 30;
+}
+.valuesDiv {
+  display: flex; 
+  flex-direction: row;
+  align-items: center;
+}
+.myDiv {
+  font-weight: bold;
+  background-color: yellow;
+  border: 3px solid black;
+  text-align: center;
+  padding: 2px;
+  margin: 30px 20px;
+}
+.div1{
+  font-size: 30px;
+  width: 30px;
+  height: 30px;
+}
+.div2 {
+  font-size: 24px;
+  width: 24px;
+  height: 24px;
+}
+.div3 {
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+}

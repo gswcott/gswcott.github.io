@@ -1,0 +1,344 @@
+</doctype html>
+<html>
+  <head>
+    <meta charset=utf-8>
+    <title> TP20: Récapitulons des programmes Python </title>
+    <head>
+    <style>
+    .shadowbox {
+      #width: 50em;
+      border: 1px solid #000;
+      box-shadow: 8px 8px 5px #444;
+      padding: 8px 12px;
+      background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc);
+    }
+    /* Style the tab */
+    .tab {
+      overflow: hidden;
+      border: 1px solid #ccc;
+      background-color: #f1f1f1;
+
+    }
+
+/* Style the buttons that are used to open the tab content */
+  .tab button {
+    background-color: inherit;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      transition: 0.3s;
+      color: black; font-size: 20px;font-weight: bold;
+    }
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+      background-color: #ddd;
+    }
+
+/* Create an active/current tablink class */
+    .tab button.active {
+      background-color: #ccc;
+    }
+      h1 { color: blue; font-size: 42px;font-weight: bold; font-family: Arial}
+      h2 { color: black; font-size: 24px;font-weight: bold; font-family: Arial}
+      h3 { color: black; font-size: 16px;font-weight: bold; font-family: Arial}
+      code {font-family: monospace}
+    </style>
+  </head>
+  <body>
+    <h1> Mes snippets Python </h1>
+    <div class="tab">
+      <button class="tablinks" onclick="openTab(event, 'Suite')">Suite</button>
+      <button class="tablinks" onclick="openTab(event, 'Nombre aléatoire')">Nombre aléatoire</button>
+      <button class="tablinks" onclick="openTab(event, 'Simulation')">Simulation</button>
+      <button class="tablinks" onclick="openTab(event, 'Parcours')">Parcours</button>
+    </div>
+    <div id="Suite" class="shadowbox">
+      <h3> Suite de Hamming </h3>
+      <p>
+        <pre>
+          <code>
+            def suiteHamming(n):
+                L=[0]*n
+                L[0]=1
+                i=1
+                nombre=2
+                while (i<=n-1):
+                    nombre_n=nombre
+                    while (nombre_n%2==0):
+                        nombre_n=nombre_n/2
+                    while (nombre_n%3==0):
+                        nombre_n=nombre_n/3
+                    while (nombre_n%5==0):
+                        nombre_n=nombre_n/5
+                    if nombre_n==1:
+                        L[i]=nombre
+                        i+=1
+                    nombre+=1
+                return L
+          </code>
+        </pre>
+      </p>
+      <h3> Suite de Perrin </h3>
+      <p>
+        <pre>
+          <code>
+          def perrin(n):
+              u=[0]*(n+1)
+              for i in range(n+1):
+                  if i==0:
+                      u[i]=3
+              elif i==1:
+                  u[i]=0
+              elif i==2:
+                  u[i]=2
+              else:
+                  u[i]=u[i-3]+u[i-2]
+              return u[-1]
+          </code>
+        </pre>
+      </p>
+    </div>
+    <div id="Nombre aléatoire" class="shadowbox">
+      <h3> Loi de Bernouilli </h3>
+      <p>
+        <pre>
+          <code>
+            def ber(p):
+                if random.random()>=1-p:
+                    return 1
+                else:
+                    return 0
+          </code>
+        </pre>
+      </p>
+
+      <h3> Loi binomiale </h3>
+      <p>
+        <pre>
+          <code>
+            def binom(n,p):
+                y=0
+                for i in range(n):
+                    y=y+ber(p)
+                return y
+          </code>
+        </pre>
+      </p>
+      <h3> Loi unifrome sur [rinf,rsup] </h3>
+      <p>
+        <pre>
+          <code>
+            def loiUniforme(rinf,rsup):
+                return random.randint(rinf,rsup-1)+random.random()
+          </code>
+        </pre>
+      </p>
+      <h3> Loi exponentielle </h3>
+      <p>
+        <pre>
+          <code>
+            def expo(a):
+                y=random.random()
+                x=-math.log(1-y)/a
+                return x
+          </code>
+        </pre>
+      </p>
+      <h3> Loi logistique </h3>
+      <p>
+        <pre>
+          <code>
+            def logis(mu,s):
+                 y=random.random()
+                 x=mu-s*math.log((1-y)/y)
+                 return x
+          </code>
+        </pre>
+      </p>
+      <h3> Loi normale centrée et réduite </h3>
+      <p>
+        <pre>
+          <code>
+            def norm01():
+                X=[random.random()-1/2 for i in range(12)]
+                S=sum(X)
+                return S
+          </code>
+        </pre>
+      </p>
+      <h3> Loi normale (mu,sigma) </h3>
+      <p>
+        <pre>
+          <code>
+            def loiNormale(mu, sigma):
+                X=norm01()
+                return sigma*X+mu
+          </code>
+        </pre>
+      </p>
+      <h3> Loi chi2 de n dégré </h3>
+      <p>
+        <pre>
+          <code>
+            def chi2(n):
+                X2=0
+                for i in range(n):
+                  X2=X2+norm01()**2
+                return X2
+          </code>
+        </pre>
+      </p>
+    </div>
+    <div id="Simulation" class="shadowbox">
+      <h3> Moyenne et Variance d'une variable aléatoire, calculées par la simulation</h3>
+      <p>
+        <pre>
+          <code>
+            def simulationEV(N,f,*params):
+                sumX=0
+                sumX2=0
+                for i in range(N):
+                    X=f(*params)
+                    sumX=sumX+X
+                    sumX2=sumX2+X**2
+                return [sumX/N,sumX2/N-(sumX/N)**2]
+          </code>
+        </pre>
+      </p>
+      <h3> Probablité approchée d'obtenir une valeur dans [rinf, rsup] par simulation</h3>
+      <p>
+        <pre>
+          <code>
+            def simulationProba(N,f,rinf,rsup,*params):
+                count=0
+                for i in range(N):
+                    x=f(*params)
+                    if x>=rinf and x<=rsup:
+                        count+=1
+                return count/N
+        </code>
+      </pre>
+    </p>
+    </div>
+    <div id="Parcours" class="shadowbox">
+      <h3> Parcours d'un graphe en largeur </h3>
+      <p>
+        <pre>
+          <code>
+            class Sommet:
+                def __init__(self,nom):
+                    self.nom=nom
+                    self.voisins=[]
+                    self.marque=False
+            a=Sommet("Toto")
+            b=Sommet("Roro")
+            c=Sommet("Titi")
+            d=Sommet("Lulu")
+            e=Sommet("Mimi")
+            f=Sommet("Bibi")
+            g=Sommet("Fifi")
+            a.voisins=[b,c]
+            b.voisins=[d]
+            c.voisins=[f]
+            d.voisins=[g,e]
+            e.voisins=[]
+            f.voisins=[a]
+            g.voisins=[]
+            file=[a]
+            while (len(file)!=0):
+                x=file.pop()
+                print("je parcours "+ x.nom)
+                x.marque=True
+                if x.voisins!=[]:
+                    for i in range(len(x.voisins)):
+                        if x.voisins[i].marque==False:
+                            file=[x.voisins[i]]+file
+          </code>
+        </pre>
+      </p>
+      <h3> Parcours d'un graphe en profondeur </h3>
+      <p>
+        <pre>
+          <code>
+            pile=[a]
+            while (len(pile)!=0):
+                x=pile.pop()
+                print("je parcours "+ x.nom)
+                x.marque=True
+                if x.voisins!=[]:
+                    for i in range(len(x.voisins)):
+                        if x.voisins[i].marque==False:
+                            pile.append(x.voisins[i])
+          </code>
+        </pre>
+      </p>
+      <h3> Parcours d'un arbre en largeur </h3>
+      <p>
+        <pre>
+          <code>
+            class Arbre:
+                def __init__(self,nom):
+                    self.nom=nom
+                    self.gauche=None
+                    self.droite=None
+                def miauler(self):
+                    print("Miau ! je m'appelle "+ self.nom)
+            a=Arbre("Toto")
+            b=Arbre("Roro")
+            c=Arbre("Titi")
+            d=Arbre("Lulu")
+            e=Arbre("Mimi")
+            f=Arbre("Bibi")
+            g=Arbre("Fifi")
+            a.gauche=b
+            a.droite=c
+            b.gauche=d
+            b.droite=e
+            c.droite=f
+            e.gauche=g
+            file=[a]
+            while (len(file)!=0):
+                x=file.pop()
+                x.miauler()
+                if x.gauche!=None:
+                    file=[x.gauche]+file
+                if x.droite!=None:
+                    file=[x.droite]+file
+          </code>
+        </pre>
+      </p>
+      <h3> Parcours d'un arbre en profondeur </h3>
+      <p>
+        <pre>
+          <code>
+            pile=[a]
+            while (len(pile)!=0):
+                x=pile.pop()
+                x.miauler()
+                if x.droite!=None:
+                    pile.append(x.droite)
+                if x.gauche!=None:
+                    pile.append(x.gauche)
+          </code>
+        </pre>
+      </p>
+    </div>
+    <script>
+      function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("shadowbox");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+    </script>
+  </body>
+</html>
