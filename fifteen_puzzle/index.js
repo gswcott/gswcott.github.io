@@ -15,7 +15,7 @@ function initialisation(){
     showGridNumber()
     shuffle();
     shuffleBtn.onclick = () =>{
-        shffule();
+        shuffle();
     }
 }
 
