@@ -157,7 +157,7 @@ let projects = [
     },
     {
         name: "paving_truchet",
-        title: "Truchet paving", 
+        title: "Truchet tiling", 
         description: ""
     },
     {
