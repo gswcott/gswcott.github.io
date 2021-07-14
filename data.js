@@ -1,10 +1,5 @@
 let projects = [
     {
-        name: "parachute_animals",
-        title: "Parachute Animals", 
-        description: ""
-    },
-    {
         name: "puzzle_bobble",
         title: "Puzzle bobble", 
         description: ""
