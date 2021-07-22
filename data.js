@@ -1,12 +1,12 @@
 let projects = [
     {
-        name: "parachute_animals",
-        title: "Parachute Animals", 
+        name: "bubble_animals",
+        title: "Bubble Animals", 
         description: ""
     },
     {
-        name: "puzzle_bobble",
-        title: "Puzzle bobble", 
+        name: "parachute_animals",
+        title: "Parachute Animals", 
         description: ""
     },
     {
