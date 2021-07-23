@@ -1,0 +1,19 @@
+* {
+    margin: 0; 
+    padding: 0;
+}
+
+body{
+    overflow-x: hidden;
+    overflow-y: hidden;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+canvas{
+    background-color: black;
+    //border: 2px solid green;
+}
