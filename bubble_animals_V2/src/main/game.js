@@ -37,11 +37,11 @@ export class Game{
         this.nbRows = globals.config.nbRows; 
         this.nbCols = globals.config.nbCols; 
         this.gridH = globals.config.gridH; 
-        this.scorePanelH = globals.config.scorePanelH, 
-        this.ceilH = globals.config.ceilH, 
-        this.groundH = globals.config.groundH, 
-        this.wallS = globals.config.wallS,
-        this.thresholdH = globals.config.thresholdH, 
+        this.scorePanelH = globals.config.scorePanelH;
+        this.ceilH = globals.config.ceilH;
+        this.groundH = globals.config.groundH;
+        this.wallS = globals.config.wallS;
+        this.thresholdH = globals.config.thresholdH;
         this.scaleTitle = globals.config.scaleTitle; 
     }
     init(){
