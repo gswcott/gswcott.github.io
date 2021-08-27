@@ -1,0 +1,40 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*background-color: black;*/
+ }
+ 
+ p{
+    font-size: 20px;
+    font-weight: 500;
+ }
+
+ input {
+    margin-left: 10px; 
+    margin-right: 10px; 
+    width: 140px;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Times New Roman', Times, serif;
+    background-color:rgb(65, 104, 65);
+    color: rgb(255, 76, 0);
+    border-radius: 30%;
+    border-color: rgb(209, 116, 10);
+ }
+
+ #zone_canvas { 
+    position: relative; 
+    width:800px; 
+    height:600px; 
+    border: 5px gray solid; 
+    margin-top:20px;
+}
+ canvas{position: absolute}
+ #zone_3D{z-index: 1}
+ #zone_2D{z-index: 2}
+ 
+ strong {
+    margin-top: 20px; 
+    font-size: 16px;
+ }

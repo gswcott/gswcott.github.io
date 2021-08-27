@@ -1,17 +1,17 @@
 let projects = [
     {
-        name: "bubble_animals_V2",
-        title: "Bubble Animals V2", 
+        name: "sokoban_3D",
+        title: "Sokoban en 3D", 
         description: ""
     },
     {
         name: "bubble_animals",
-        title: "Bubble Animals", 
+        title: "Bubble Animals (Google play)", 
         description: ""
     },
     {
         name: "parachute_animals",
-        title: "Parachute Animals", 
+        title: "Parachute Animals (Google play)", 
         description: ""
     },
     {

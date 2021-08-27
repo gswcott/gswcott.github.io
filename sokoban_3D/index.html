@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Sokoban</title>
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Sokoban</h1>
+        <p></p>
+        <div>
+            <input type = "button" id = "allLevels" value = "All levels">
+            <input type = "button" id = "previousLevel" value = "Previous level">
+            <input type = "button" id = "nextLevel" value = "Next level"> 
+            <input type = "button" id = "restart" value = "Restart the level">
+            <input type = "button" id = "undo" value = "Undo">
+        </div>
+        <div id = "zone_canvas">
+            <canvas width = 800 height = 600 id = "zone_3D"></canvas>
+            <canvas width = 800 height = 600 id = "zone_2D"></canvas>
+        </div>
+        <strong>Use the four arrows on the keyboard to move the player.</strong>
+        <script type = "text/javascript" src = "library/three.js"></script>
+        <script src="levels.js"></script>
+        <script src="game.js"></script>
+    </body>
+</html>
