@@ -1,7 +1,12 @@
 let projects = [
     {
+        name: "maze_threejs",
+        title: "3D Maze ", 
+        description: ""
+    },
+    {
         name: "sokoban_3D",
-        title: "Sokoban en 3D", 
+        title: "3D Sokoban", 
         description: ""
     },
     {
