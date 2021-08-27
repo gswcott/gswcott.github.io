@@ -49,7 +49,6 @@ class Button {
 }
 
 
-
 window.onload=initialisation
 function initialisation(){
     can3D = document.querySelector("#zone_3D"); 
@@ -112,7 +111,16 @@ function initGame(){
     gameState = "play";
     level = initLevel; 
     oldTime = 0;
-    initCompleteLevels(); 
+    if(typeof(Storage)!="undefined"){
+        if(localStorage.sokoban_completeLevels){
+            completeLevels = JSON.parse(localStorage.sokoban_completeLevels);
+            
+        }else{
+            initCompleteLevels(); 
+        }
+    }else {
+        initCompleteLevels(); 
+    }
     initMenu();
     loadLevel(level);
 }
@@ -644,6 +652,7 @@ function update(dt){
         player.updateAnimation(dt);
         if (victoryLevel()){
             completeLevels[level-1] = 1; 
+            localStorage.sokoban_completeLevels = JSON.stringify(completeLevels); 
             levelButtons[level -1].bgColor = [20, 50, 20, 0.6];
             if(!victoryGame()){
                 levelButtons[level-1].current = false;
