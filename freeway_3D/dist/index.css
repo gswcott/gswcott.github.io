@@ -1,0 +1,16 @@
+/*!*****************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/index.css ***!
+  \*****************************************************************/
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*
+canvas{
+    width: 100%; 
+    height: 100%;  
+    display: block; 
+    background: url(../www/assets/imgBG.png) no-repeat center center;
+    background-size: cover;
+}*/

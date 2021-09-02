@@ -1,5 +1,10 @@
 let projects = [
     {
+        name: "freeway_3D",
+        title: "3D freeway ", 
+        description: ""
+    },
+    {
         name: "maze_threejs",
         title: "3D Maze ", 
         description: ""
